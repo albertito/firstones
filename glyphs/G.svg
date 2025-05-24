@@ -1,0 +1,15 @@
+<g id="glyph:G" _fo_height="9">
+  <title>G</title>
+  <polygon
+    points="
+    0, 0
+    -3, 6
+	0, 9
+    3, 6
+    "
+    fill="transparent"
+    />
+  <circle r="1" cx="0" cy="6"
+    fill="currentcolor"
+	stroke-width="0" />
+</g>

@@ -1,0 +1,16 @@
+<g id="glyph:V" _fo_height="6">
+  <title>V</title>
+  <path
+    d="
+    M 0, 0
+    L -4, 0
+    L 0, 6
+    L 4, 0
+    L 0, 0
+    "
+    fill="transparent"
+    />
+  <circle r="1" cx="0" cy="2.2"
+    fill="currentcolor"
+	stroke-width="0" />
+</g>

@@ -1,0 +1,16 @@
+<g id="glyph:bOY" _fo_height="12" _fo_connector="true">
+  <title>bOY</title>
+  <polyline
+    points="
+    0, 0
+    0, 4.5
+    2, 6
+    0, 7.5
+    0, 12
+    "
+    fill="transparent"
+    />
+  <circle r="0.5" cx="0" cy="6"
+    fill="currentcolor"
+	stroke-width="0" />
+</g>

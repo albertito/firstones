@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>She-Ra First Ones generator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark light">
+
+<style type="text/css">
+  body {
+    font-family: sans-serif;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #121212;
+	  color: #c9d1d9;
+	}
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  svg {
+    width: 40em;
+    max-width: 100%;
+    height: auto;
+    max-height: 60vh;
+    border: 1px solid orange;
+  }
+</style>
+</head>
+<body>
+
+<h1>
+<a href="https://en.wikipedia.org/wiki/She-Ra_and_the_Princesses_of_Power">She-Ra</a>
+<a href="https://she-raandtheprincessesofpower.fandom.com/wiki/First_Ones_writing">First Ones</a>
+<a href=".">generator</a>
+</h1>
+
+<form action="." method="get">
+<input type="text" name="words"
+  autofocus aria-label="Words to convert"
+{{if .Words}}
+  placeholder="{{.Words | join " "}}"
+{{else}}
+  placeholder="etheria"
+{{end}}
+/>
+<input type="submit" value="✨" aria-label="convert"/>
+</form>
+
+{{if .Error}}
+<hr>
+<p style="color: red;">{{.Error}}</p>
+{{end}}
+
+{{if .SVG}}
+<hr>
+
+{{.SVG}}
+
+<p>
+<h1><a href="svg?words={{.Words | join " "}}">🖼️</a></h1>
+{{end}}
+
+<hr>
+<p>
+This is a generator for the
+<a href="https://she-raandtheprincessesofpower.fandom.com/wiki/First_Ones_writing">
+First Ones language</a> from the
+<a href="https://en.wikipedia.org/wiki/She-Ra_and_the_Princesses_of_Power">
+She-Ra and the Princesses of Power</a> series.<p>
+
+You type words in the box above, press the ✨ button, and you'll see them
+written in the First Ones language.<p>
+
+English and Spanish are supported.<p>
+
+Use "/" to split a word on the word line (for style purposes), and spaces to
+separate between words.<br>
+You can force a language by prefixing a word with the language code. This also
+allows mixing languages in the same input.<p>
+
+For other languages, or manual input, you can write the glyphs directly using
+the names from the official
+<a href="https://www.dreamworkstv.com/wp-content/uploads/2015/07/SheRa_FirstOnes_Language.pdf">
+First Ones Language definition</a>.<p>
+
+The resulting image (in
+<a href="https://en.wikipedia.org/wiki/SVG">SVG format</a>) can be downloaded
+by clicking the 🖼️ link.<p>
+
+Examples:
+<ul>
+<li><a href="?words=Etheria">Etheria</a></li>
+<li><a href="?words=Enseña">Enseña</a></li>
+<li><a href="?words=Ca/tra">Ca/tra</a> (split word)</li>
+<li><a href="?words=Bright Moon">Bright Moon</a> (multiple words)</li>
+<li><a href="?words=SH-fEEt-R-All">SH-fEEt-R-All</a> (glyph name input)</li>
+<li><a href="?words=es:hola en:hello">es:hola en:hello</a> (language prefix)</li>
+</ul>
+<p>
+
+References:
+<ul>
+<li><a href="https://www.dreamworkstv.com/wp-content/uploads/2015/07/SheRa_FirstOnes_Language.pdf">
+  First Ones Language definition</a>
+<li><a href="https://she-raandtheprincessesofpower.fandom.com/wiki/First_Ones_writing">
+  Fandom wiki page on First Ones writing</a>
+<li>Dictionaries and pronunciation tables from the
+<a href="https://github.com/open-dict-data/ipa-dict">Open Dict Data
+  project</a>
+</ul>
+
+Other generators:
+<ul>
+<li><a href="https://fionapeakgames.itch.io/first-ones-translator">
+  First Ones Translator by Fiona Peak Games</a>
+</ul>
+
+</body>
+</html>

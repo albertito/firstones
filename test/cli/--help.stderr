@@ -1,0 +1,16 @@
+# firstones - convert words to She-Ra First Ones language
+
+Usage:
+
+  firstones \[flags] svg \[words...]
+    Generate an SVG image with the given words, printed to stdout.
+  firstones \[flags] http <address>
+    Start a web server at the given address.
+  firstones \[flags] dump-glyphs
+    Generate an SVG image with all the glyphs, for debugging.
+  firstones \[flags] version
+    Print software version information.
+
+Flags:
+  -grid
+    	show grid in the svg, for debugging
