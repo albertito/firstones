@@ -41,12 +41,15 @@
 </h1>
 
 <form action="." method="get">
-<input type="text" name="words"
-  autofocus aria-label="Words to convert"
+<input type="search" name="words"
+  aria-label="Words to convert"
+  placeholder="Etheria"
+  tabindex="1"
 {{if .Words}}
-  placeholder="{{.Words | join " "}}"
+  value="{{.Words | join " "}}"
+  onfocus="this.select()"
 {{else}}
-  placeholder="etheria"
+  autofocus
 {{end}}
 />
 <input type="submit" value="✨" aria-label="convert"/>
