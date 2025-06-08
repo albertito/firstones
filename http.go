@@ -37,6 +37,7 @@ func serveHTTP(addr string) {
 	http.HandleFunc("GET /svg", handleSVG)
 	http.HandleFunc("PUT /svg", handleSVG)
 
+	log.Printf("firstones %s", Version())
 	log.Printf("Starting HTTP server on %q", addr)
 	log.Fatal(http.ListenAndServe(addr, nil))
 }
