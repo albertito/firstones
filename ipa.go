@@ -38,7 +38,12 @@ var namesIPA = map[string]string{
 	"frosta":      "fɹɔsta",
 	"netossa":     "nɛttɔsa",
 	"spinnerella": "spɪnɝɛɫə",
-	"etheria":     "iθiɹɑ",
+
+	// In the show this appears written a few times, but with different
+	// spellings. The first glyph is fEET or pEt, and the last is All or fUn.
+	// We pick the one from the last episode, where it appears in the corridor
+	// towards the heart.
+	"etheria": "iθiɹiə",
 
 	// These are words in English, but we want to make sure they're always
 	// identified.

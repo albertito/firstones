@@ -50,7 +50,14 @@ if ! ls --zero golden/*.png golden/auto/*.png | parallel -0 --results .3-compare
 	magick compare -metric SSIM -compose src \
 		{} .2-render/{/.}.png  .2-render/{/.}-diff.png ;
 then
-	grep -v '^1$' .3-compare/*.err
+	for i in $(grep --files-with-matches -v '^1$' .3-compare/*.err); do
+		C="$(basename "$i" .err)"
+		echo "$C differs!"
+		echo "   view:   test/.2-render/$C.png"
+		echo "   diff:   test/.2-render/$C-diff.png"
+		echo "   accept: cp test/.2-render/$C.png test/golden/auto/"
+		echo
+	done
 	fail
 fi
 
