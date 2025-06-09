@@ -132,6 +132,8 @@ function http_get_and_compare() {
 		then
 			echo "ERROR: http/$1.jpg differs from .5-http/$1.jpg" \
 				> ".5-http/$1.failed"
+			echo "  accept: cp 'test/.5-http/$1.jpg' 'test/http/$1.jpg'" \
+				>> ".5-http/$1.failed"
 			exit 1
 		fi
 	fi
