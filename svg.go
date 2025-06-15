@@ -292,6 +292,13 @@ func wordsToSVG(words []string) (SVG, int, int, error) {
 			return svg, 0, 0, fmt.Errorf(
 				"error converting %q to glyphs: %v", word, err)
 		}
+
+		if len(wordG) == 0 {
+			// Skip empty words, this can happen with words that contain just
+			// "-" or "/".
+			continue
+		}
+
 		wordsG = append(wordsG, wordG)
 	}
 
