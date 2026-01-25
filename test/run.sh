@@ -51,8 +51,8 @@ if ! ls --zero golden/*.png golden/auto/*.png | parallel -0 --results .3-compare
 		{} .2-render/{/.}.png  .2-render/{/.}-diff.png ;
 then
 	for i in .3-compare/*.err; do
-		if grep -q '^1$' "$i"; then
-			# The compare command prints "1" on equal files.
+		if grep -q '^0 (0)$' "$i"; then
+			# The compare command prints "0 (0)" on equal files.
 			continue
 		fi
 		C="$(basename "$i" .err)"
